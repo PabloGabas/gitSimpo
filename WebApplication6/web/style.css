@@ -1,0 +1,528 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 13 jun 2024, 11:12:30
+    Author     : metal
+*/
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding-top: 200px;
+    transition: background-color 0.5s ease;
+}
+
+.fixed-header {
+    background: linear-gradient(to right, #ffffff, #007bff); /* Gradiente entre azul y blanco */
+    color: #333;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-bottom: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Añade sombra suave */
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px; /* Corregido el valor negativo */
+}
+
+.logo-section {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.logo-section img:first-child {
+    width: 68px; /* Ancho deseado para el Logo-1 */
+    height: 68px;
+}
+
+.logo-section img:last-child {
+    width: 130px; /* Ancho deseado para el Logo-2 */
+    margin-top: 5px; /* Ajusta la distancia hacia abajo */
+}
+
+.logo-section img {
+    max-width: 130px;
+    max-height: 110px;
+}
+
+
+
+.btn-login,
+.btn-Singup {
+    font-size: 14px; /* Reduce el tamaño del texto */
+    padding: 8px 16px; /* Ajusta el padding del botón */
+    border-radius: 5px; /* Redondea los bordes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agrega transición para el efecto 3D */
+}
+
+/* Efecto 3D al hacer hover */
+.btn-login:hover,
+.btn-Singup:hover {
+    transform: translateY(-2px); /* Mueve el botón ligeramente hacia arriba */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra suave */
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    transition: color 0.5s ease;
+    margin-top: -25px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffd700 !important;
+}
+
+.main-content {
+    padding: 20px;
+    position: relative;
+}
+.image-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2px;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.image-section div {
+    background-image: url('https://i.ibb.co/mSthVCw/Whats-App-Image-2024-06-12-at-10-34-37-PM.jpg');
+    background-size: 300% 300%;
+    transform: translate(-100%, -50%);
+    transition: transform 1s ease-in-out;
+}
+
+
+.image-section div:nth-child(1) {
+    background-position: 0% 0%;
+}
+.image-section div:nth-child(2) {
+    background-position: 50.50% 0%;
+}
+.image-section div:nth-child(3) {
+    background-position: 100.100% 0%;
+}
+.image-section div:nth-child(4) {
+    background-position: 0% 50.0%;
+}
+.image-section div:nth-child(5) {
+    background-position: 50% 50.0%;
+}
+.image-section div:nth-child(6) {
+    background-position: 100.100% 50%;
+}
+.image-section div:nth-child(7) {
+    background-position: 0% 100.100%;
+}
+.image-section div:nth-child(8) {
+    background-position: 200.200% 100%;
+}
+.image-section div:nth-child(9) {
+    background-position: 100.100% 400.400%;
+}
+
+
+.image-section div.loaded {
+    transform: translateX(0);
+}
+
+.footer {
+    background-color: #004b87;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer .message {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+}
+.footer .message p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.footer .message a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.footer .logo {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+.footer .logo img {
+    max-width: 100px;
+}
+.footer .info {
+    flex: 1 1 60%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer .info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 20px;
+}
+.footer .info ul li {
+    margin-bottom: 10px;
+}
+.footer .social ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .social ul li {
+    margin: 0 10px;
+}
+.footer .social ul li a {
+    text-decoration: none;
+    color: #555;
+}
+.footer .copy {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+    flex-basis: 100%;
+}
+.date-location {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.date-location h3 {
+    color: #004b87;
+    margin-bottom: 10px;
+}
+.date-location p {
+    margin: 0;
+}
+
+.hero1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.hero1 h1 {
+    font-size: 24px;
+    margin-bottom: 1em;
+}
+
+.scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.profile-card {
+    display: inline-block;
+    width: 200px;
+    height: 320px;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    border-radius: 15px;
+    text-align: center;
+    padding: 0;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card .profile-image {
+    width: 100px;
+    height: 100px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    margin: 20px auto 10px auto;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.profile-card .profile-image:active {
+    transform: scale(1.2);
+}
+
+.profile-card .name {
+    background-color: rgba(135, 206, 235, 0.85);
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    border-radius: 0 0 15px 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.profile-card .occupation {
+    background-color: rgba(0, 75, 135, 0.85);
+    color: white;
+    padding: 15px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 15px 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.flower-img {
+    position: absolute;
+    top: 55%;
+    left: -30px;
+    transform: translateY(-50%);
+    max-width: 100px;
+    z-index: 1;
+    animation: moveFlower 5s linear infinite alternate;
+}
+
+@keyframes moveFlower {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(-90%); /* Mover hacia arriba */
+    }
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 80%;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+    color: #555;
+}
+
+.btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+.hero-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.image-card {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-card:hover .image-overlay {
+    opacity: 1;
+}
+
+.image-overlay h3 {
+    font-size: 2em;
+    margin: 0.8em 0;
+}
+
+.image-overlay p {
+    margin: 0.8em 0;
+    font-size: 1.1em;
+}
+
+.image-overlay .btn {
+    background-color: #e74c3c;
+    padding: 0.8em 2em;
+    border-radius: 50px;
+    margin-top: 2em;
+    font-size: 1em;
+}
+
+.image-overlay .btn:hover {
+    background-color: #c0376b;
+    transform: translateY(-3px);
+}
+
+.footer .social-icons a {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    box-shadow: none; /* Asegúrate de eliminar cualquier sombra o borde adicional */
+    border: none; /* Asegúrate de que no haya borde alrededor de los íconos */
+}
+
+.footer .social-icons a:hover {
+    background-color: #ffd700;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.message {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.message p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons li {
+    margin: 0 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #ffd700; /* Color amarillo al pasar el ratón */
+}
+
+.copy {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+    flex-basis: 100%;
+    color: white;
+}
